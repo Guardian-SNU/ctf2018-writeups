@@ -1,0 +1,10 @@
+service pwn
+{
+    disable = no
+    flags = REUSE
+    socket_type = stream
+    protocol = tcp
+    user = gsh_v2
+    wait = no
+    server = /home/gsh_v2/run.sh
+}

@@ -1,0 +1,10 @@
+service pwn
+{
+    disable = no
+    flags = REUSE
+    socket_type = stream
+    protocol = tcp
+    user = bank_robber
+    wait = no
+    server = /home/bank_robber/run.sh
+}

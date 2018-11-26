@@ -1,0 +1,10 @@
+service pwn
+{
+    disable = no
+    flags = REUSE
+    socket_type = stream
+    protocol = tcp
+    user = easy_calc
+    wait = no
+    server = /home/easy_calc/run.sh
+}

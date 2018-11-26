@@ -1,0 +1,10 @@
+service pwn
+{
+    disable = no
+    flags = REUSE
+    socket_type = stream
+    protocol = tcp
+    user = bof_study
+    wait = no
+    server = /home/bof_study/run.sh
+}

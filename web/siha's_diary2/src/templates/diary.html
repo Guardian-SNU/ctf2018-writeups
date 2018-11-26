@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Siha's Diary 2</title>
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/list.css') }}" />
+</head>
+
+<body>
+<div class="table-title">
+    <h3>Siha의 일기장</h3>
+</div>
+<table class="table-fill">
+    <tbody>
+    <tr>
+        <th class="text-left">
+            {% for para in text %}
+                <p>{{ para }}</p>
+            {% endfor %}
+        </th>
+    </tr>
+    <tr>
+        <th><button class="diary-button" onclick="window.location.href='/'">돌아가기</button></th>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

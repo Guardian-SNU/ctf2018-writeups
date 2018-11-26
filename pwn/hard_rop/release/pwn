@@ -1,0 +1,10 @@
+service pwn
+{
+    disable = no
+    flags = REUSE
+    socket_type = stream
+    protocol = tcp
+    user = hard_rop
+    wait = no
+    server = /home/hard_rop/run.sh
+}

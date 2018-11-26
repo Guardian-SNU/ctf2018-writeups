@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Siha's Diary 2</title>
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/list.css') }}" />
+</head>
+
+<body>
+<div class="table-title">
+    <h3>Siha의 일기장</h3>
+</div>
+<table class="table-small">
+    <tbody>
+    <tr>
+        <th class="text-center">
+            <strong>{search_text}</strong> 검색결과
+        </th>
+    </tr>
+    </tbody>
+</table>
+<table class="table-fill">
+    <thead>
+    <tr>
+        <th class="text-center">제목</th>
+        <th class="text-center">날짜</th>
+        <th class="text-center">보기</th>
+    </tr>
+    </thead>
+    <tbody class="table-hover">
+    {% for title, date, path in results %}
+        <tr>
+            <td class="text-left">{{ title }}</td>
+            <td class="text-left">{{ date }}</td>
+            <td><button class="diary-button" onclick="window.location.href='/diary?path={{ path }}'">보기</button></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
